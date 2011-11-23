@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>Quoteboard</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Alice' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+	<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.15.custom.css" rel="stylesheet" />	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"</script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.15.custom.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>	
+	<script type="text/javascript" src="js/handlebars.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script id="TV-template" type="text/x-handlebars-template">
+			<div class="delete"></div><div class="edit"></div>
+			<div class="quote">{{{ quote }}}</div>
+			<div class="source"><em>from</em> {{ show }} &#8212 {{ episode }}</div>
+
+	</script>
+	<script id="Movie-template" type="text/x-handlebars-template">
+			<div class="delete"></div><div class="edit"></div>
+			<div class="quote">{{{ quote }}}</div>
+			<div class="source"><em>from</em> {{ movie }}</div>
+	</script>
+	<script id="Book-template" type="text/x-handlebars-template">
+			<div class="delete"></div><div class="edit"></div>
+			<div class="quote">{{{ quote }}}</div>
+			<div class="source"><em>from</em> {{ book }} <em>by</em> {{ author }}</div>
+	</script>
+	<script id="Person-template" type="text/x-handlebars-template">
+			<div class="delete"></div><div class="edit"></div>
+			<div class="quote">{{{ quote }}}</div>
+			<div class="source"><em>by</em> {{ person }}</div>
+	</script>
+	<script id="tag-template" type="text/x-handlebars-template">
+		<div class="arrow-wrap"><div class="arrow-right"></div></div><a href="#">{{ text }}</a>
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="main">
+			<h1>Quoteboard</h1>
+			<form>
+				<div class="form_input"><span class="label">Quote:</span> <textarea rows="3" cols="40"></textarea></div>
+				<div class="clear"></div>
+				<div class="form_input"><span class="label">From:</span>
+				<div id="radio">
+					<input type="radio" id="TV" name="source_type" value="tv" /><label for="TV">TV</label>
+					<input type="radio" id="Movie" name="source_type" value="movie" /><label for="Movie">Movie</label>
+					<input type="radio" id="Book" name="source_type" value="book" /><label for="Book">Book</label>
+					<input type="radio" id="Person" name="source_type" value="person" /><label for="Person">Person</label>
+				</div></div>
+				<div class="clear"></div>
+				<div class="form_input TV"><span class="label">Show:</span> <input type="text" name="show" /> </div>
+				<div class="clear"></div>
+				<div class="form_input TV"><span class="label">Episode:</span> <input type="text" name="episode" /> </div>
+				<div class="clear"></div>
+				<div class="form_input Movie"><span class="label">Movie:</span> <input type="text" name="movie" /> </div>
+				<div class="clear"></div>
+				<div class="form_input Book"><span class="label">Book:</span> <input type="text" name="book" /> </div>
+				<div class="clear"></div>
+				<div class="form_input Book"><span class="label">Author:</span> <input type="text" name="author" /> </div>
+				<div class="clear"></div>
+				<div class="form_input Person"><span class="label">Person:</span> <input type="text" name="person" /> </div>
+				<div class="clear"></div>
+				<div id="button">Submit</div>
+			</form>
+			<ul id="quotes"></ul>
+		</div>
+		<div id="side">Filter by:
+		<ul id="tags"></ul>
+		</div>
+	</div>
+</body>
+</html>

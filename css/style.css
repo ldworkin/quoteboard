@@ -1,0 +1,186 @@
+* { margin:0; padding:0; }
+
+body {
+	background-image: url('../images/bg.png');
+	font-family: "Questrial", sans-serif;
+	font-size: 22px;
+	padding: 20px 0;
+}
+
+#wrapper {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#main {
+	width: 700px;
+	border-radius: 15px;
+	background-color: white;
+	padding: 30px;
+	float: left;
+
+}
+
+#side{
+	width: 150px;
+	border-radius: 15px;
+	background-color: white;
+	padding: 30px;
+	float: right;
+}
+
+#tags {
+	padding-top: 15px;
+}
+
+#tags li {
+	padding: 5px 0px;
+}
+
+#tags li ul {
+	padding-left: 10px;
+	display: none;
+}
+
+#tags li ul li {
+	padding: 2px 0px;
+	font-size: 16px;
+}
+
+
+h1 {
+	font-size: 26px;
+	font-family: "Alice", serif;
+	padding-bottom: 25px;
+}
+
+li {
+	list-style-type: none;
+}
+
+a, a:visited {
+	color: #1c94c4;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ef8c08;
+	text-decoration: none;
+}
+
+.form_input {
+	padding: 10px 0px;
+}
+
+.label {
+	width: 150px;
+	display: block;
+	float:left;
+}
+
+input, textarea {
+	float: left;
+	font-family: "Questrial", sans-serif;
+	font-size: 22px;
+}
+
+#radio {
+	font-size: 12px !important;
+	float: left !important;
+}
+
+.TV, .Movie, .Book, .Person {
+	display: none;
+}
+
+#button {
+	margin: 20px 0 !important;
+	font-size: 16px !important;
+}
+
+.quote_wrap {
+	padding: 10px;
+	padding-right: 20px;
+	margin: 20px 0;
+	background-color: #eee;
+	border-radius: 15px;
+	position: relative;
+	border-top: 5px solid #ddd;
+	cursor: move;
+}
+
+.quote {
+}
+
+.source {
+	padding-top: 10px;
+	font-size: 18px;
+}
+
+.name1 {
+	color: #1c94c4;
+	font-weight: bold;
+}
+
+.name2 {
+	color: #ef8c08;
+	font-weight: bold;
+}
+
+.delete {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	color: #b81900;
+	font-size: 18px;
+	display: none;
+	cursor: pointer;
+	background-image: url("../images/Delete.png");
+	width: 30px;
+	height: 30px;
+}
+
+.edit {
+	position: absolute;
+	top: 30px;
+	right: 12px;
+	color: #b81900;
+	font-size: 18px;
+	display: none;
+	cursor: pointer;
+	background-image: url("../images/Edit.png");
+	width: 25px;
+	height: 25px;
+}
+
+.clear {
+	clear: both;
+}
+
+.arrow-down {
+	position: relative;
+	top: 16px;
+	right: 18px;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #ddd;
+}
+
+
+.arrow-right {
+	position: relative;
+	top: 16px;
+	right: 18px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid #ddd;
+}
+
+.arrow-wrap {
+	width: 10px;
+	height: 10px;
+}
