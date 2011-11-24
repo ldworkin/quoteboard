@@ -98,7 +98,7 @@ $(function() {
 		makeQuoteModel: function(quote_object) {
 			if (!this.editQuote) {
 				var id = Math.floor(Math.random()*1000);
-				var model = new QuoteModel(id);
+				var model = new QuoteModel(id, this);
 				model.addAttrs(quote_object);
 				quote_object.id = id;
 				this.addQuoteModel(model);
