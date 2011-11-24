@@ -132,6 +132,11 @@ $(function() {
 			this.observer.notify(true);
 		},
 		
+		beingEdited: function(model) {
+			this.editQuote = model;
+			this.observer.notify(false);
+		},
+		
 		editQuoteModel: function(quote_object) {
 			this.editQuote.addAttrs(quote_object);
 			this.observer.notify(true);
@@ -205,14 +210,17 @@ $(function() {
  				_this.controller.delQuoteController(_this.model);
  			});
  			this.elements.edit.click(function() {
- 				$("textarea").val(_this.model.quote_pure);
- 				$("#" + _this.model.type).click();
-				var attrs = _this.model.collection.quoteTypeAttrs(_this.model.type);
-				for (var i = 0; i < attrs.length; i++) {
-					$("input[name=" + attrs[i] + "]").val(_this.model[attrs[i]])
-				}
- 				_this.controller.editQuoteController(_this.model);
+ 			 	_this.controller.editQuoteController(_this.model);
  			});
+		},
+		
+		editMode: function() {
+			$("textarea").val(this.model.quote_pure);
+			$("#" + this.model.type).click();
+			var attrs = this.model.collection.quoteTypeAttrs(this.model.type);
+			for (var i = 0; i < attrs.length; i++) {
+				$("input[name=" + attrs[i] + "]").val(this.model[attrs[i]])
+			}
 		}
 	}
 	
@@ -373,7 +381,8 @@ $(function() {
  		},
  		
  		editQuoteController: function(model) {
- 			this.model.editQuote = model;
+ 			this.model.beingEdited(model);
+ 			model.view.editMode();
  		}
 
 	}
