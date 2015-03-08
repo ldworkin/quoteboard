@@ -81,7 +81,9 @@ a:hover {
 input, textarea {
 	float: left;
 	font-family: "Questrial", sans-serif;
-	font-size: 22px;
+	font-size: 16px;
+	padding: 4px;
+	width: 500px;
 }
 
 #radio {
@@ -93,7 +95,7 @@ input, textarea {
 	display: none;
 }
 
-#button {
+.button {
 	margin: 20px 0 !important;
 	font-size: 16px !important;
 }
@@ -106,15 +108,15 @@ input, textarea {
 	border-radius: 15px;
 	position: relative;
 	border-top: 5px solid #ddd;
-	cursor: move;
 }
 
-.quote {
+.cursor {
+	cursor: move;
 }
 
 .source {
 	padding-top: 10px;
-	font-size: 18px;
+	font-size: 14px;
 }
 
 .name1 {

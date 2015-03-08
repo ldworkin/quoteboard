@@ -4,11 +4,10 @@
   <meta charset=utf-8 />
   <title>Quoteboard</title>
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-  <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css">
   <link type="text/css" href="css/ui-lightness/jquery-ui-1.8.15.custom.css" rel="stylesheet" />	
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"</script>
-  <script type="text/javascript" src="js/jquery-ui-1.8.15.custom.min.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>	
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>	
   <script type="text/javascript" src="js/handlebars.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
   <script id="TV-template" type="text/x-handlebars-template">
@@ -42,7 +41,7 @@
       <form>
         <div class="form_input">
           <span class="label">Quote:</span>
-          <textarea rows="3" cols="40"></textarea>
+          <textarea rows="6"></textarea>
         </div>
         <div class="clear"></div>
         <div class="form_input"><span class="label">From:</span>
@@ -83,7 +82,7 @@
           <input type="text" name="person" />
         </div>
         <div class="clear"></div>
-        <div id="button">Submit</div>
+        <div class="button" id="button">Submit</div>
       </form>
       <ul id="quotes"></ul>
     </div>
